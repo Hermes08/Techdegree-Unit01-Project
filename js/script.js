@@ -1,34 +1,27 @@
 /******************************************
 Treehouse Techdegree:
 FSJS project 1 - A Random Quote Generator
+David Aguirre 
 ******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
 /*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-
-  Recommended: 
-    - Add at least one `year` and/or `citation` property to at least one 
-      quote object.
+I created my array of objects as requested. I have included all of the elements required so that they show in the html2 variable.
 ***/
 var html2;
 var quotes = [ 
-  { quote : 'Everything will be tokenized and connected by a blockchain one day.' , source: 'Fred Ehrsam ' , citation : 'University' , year : 1998} ,              
-  { quote : 'Keep it Rollin ' ,  source : 'Korn' , citation : 'University' , year : 1998 }, 
-  { quote : 'Bitcoin is a technological tour de force.' , source : ' Bill Gates ' , citation : 'University' , year : 1998} ,
-  { quote : 'Lento pero seguro.' , source : ' David Aguirre ' , citation : 'University' , year : 1998 } 
+  { quote : 'That\'s one small step for [a] man, one giant leap for mankind.' , source: 'Neil Amstrong' , citation : 'Apollo 11 Moon landing ' , year : 1969 } ,              
+  { quote : 'Oh, the humanity ' ,  source : 'Herb Morrison' , citation : 'Hinderburg crash' , year : 1937}, 
+  { quote : 'The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.' , source : '         Satoshi Nakamoto' , citation : 'Bitcoin Genesis Block' , year : '2009' } ,
+  { quote : 'Get up, stand up, Stand up for your rights. Get up, stand up, Don\'t give up the fight.' , source : ' Bob Marley ' , citation : 'Live! Album' , year : 1975 }, 
+  { quote : 'I\'m gonna make him an offer he can\'t refuse.' , source : ' Marlon Brando' , citation : 'The Godfather' , year : 1972 }
                                                                                       ]
   
 
 /***
-  Create the `getRandomQuote` function to:
-   - generate a random number 
-   - use the random number to `return` a random quote object from the 
-     `quotes` array.
+  I created my getRandomQuote function.
+  I am using the mathfloor (mathrandom) method in order to get the random selection based on the length of my previous array of objects.
 ***/
  var array ;
 function getRandomQuote (array) {
@@ -37,6 +30,8 @@ function getRandomQuote (array) {
   return randomNum
 
  }
+
+ /* This function prints accordingly to the suggested specifications. The documentbyId function is returning the html2 variable */
 
   function printQuote(message){
    getRandomQuote(array)
@@ -57,26 +52,11 @@ var html2 = '<p class ="quote">' + newQuote.quote + ' ' + '</p>';
 
 
 
-/***
-  Create the `printQuote` function to: 
-   - call the `getRandomQuote` function and assign it to a variable.
-   - use the properties of the quote object stored in the variable to 
-     create your HTML string.
-   - use conditionals to make sure the optional properties exist before 
-     they are added to the HTML string.
-   - set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
 
 
 
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
+// Thanks for reviewing my code.
