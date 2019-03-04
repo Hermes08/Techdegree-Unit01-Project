@@ -39,11 +39,11 @@ function getRandomQuote (array) {
 
 var html2 = '<p class ="quote">' + newQuote.quote + ' ' + '</p>';
       html2 += '<p class="source">' + newQuote.source +
-      '<span class="citation">' + newQuote.citation + 
+      '<span class="citation">' + newQuote.citation + '</span>'
       '<span class="year">' + newQuote.year + '</span>'
       '</p>'
    document.getElementById('quote-box').innerHTML = html2;
-  return html2}
+  }
 
 
 
